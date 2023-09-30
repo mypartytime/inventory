@@ -47,7 +47,18 @@ class AdminController extends Controller
 
         $profile_id = Auth::user()->id;
 
+        $old_image = "";
+
+        $oldImage = $request->old_image;
+
+
+        
+
         if($request->file('profile_image')){
+
+            if (!empty($oldImage)) {
+                unlink('upload/admin_images/'.$oldImage);
+            }
 
             $image = $request->file('profile_image');
             $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();

@@ -15,6 +15,7 @@
             <form method="post" action="{{route('update.profile')}}" enctype="multipart/form-data">
                 @csrf
 
+                <input name="old_image" type="hidden" value="{{ $editData->profile_image }}">
                 
 
             <div class="row mb-3">
