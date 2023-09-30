@@ -8,6 +8,7 @@ use Illuminate\Http\RedirectResponse;
 use App\Models\User;
 use Intervention\Image\Facades\Image;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
 {
@@ -18,6 +19,8 @@ class AdminController extends Controller
         $request->session()->invalidate();
 
         $request->session()->regenerateToken();
+
+        
 
         return redirect('/login');
     } // end method
@@ -91,6 +94,36 @@ class AdminController extends Controller
 
         } // End Eles 
 
+
+    }// End Method 
+
+    public function ChangePassword(){
+
+        return view('admin.admin_change_password');
+
+    }// End Method 
+
+    public function UpdatePassword(Request $request){
+
+        $validateData = $request->validate([
+            'oldpassword' => 'required',
+            'newpassword' => 'required',
+            'confirm_password' => 'required|same:newpassword',
+
+        ]);
+
+        $hashedPassword = Auth::user()->password;
+        if (Hash::check($request->oldpassword,$hashedPassword )) {
+            $users = User::find(Auth::id());
+            $users->password = bcrypt($request->newpassword);
+            $users->save();
+
+            session()->flash('message','เปลี่ยนรหัสผ่านเรียบร้อยแล้ว');
+            return redirect()->route('admin.profile');
+        } else{
+            session()->flash('message','รหัสผ่านเก่าไม่ถูกต้อง');
+            return redirect()->back();
+        }
 
     }// End Method 
 }
