@@ -60,9 +60,14 @@ class AdminController extends Controller
                 'updated_at' => Carbon::now(),
             ]);
 
+            $notification = array(
+                'message' => 'ตั้งค่าโปรไฟล์ใหม่เรียบร้อยแล้ว', 
+                'alert-type' => 'info'
+            );
+
             
 
-            return redirect()->back();
+            return redirect()->back()->with($notification);
 
 
         } else {
@@ -75,9 +80,14 @@ class AdminController extends Controller
                 'updated_at' => Carbon::now(),
             ]);
 
+            $notification = array(
+                'message' => 'ตั้งค่าโปรไฟล์ใหม่เรียบร้อยแล้ว', 
+                'alert-type' => 'info'
+            );
+
             
 
-            return redirect()->back();
+            return redirect()->back()->with($notification);
 
         } // End Eles 
 
