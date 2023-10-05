@@ -17,7 +17,7 @@ use App\Http\Controllers\Pos\SupplierController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Route::get('/dashboard', function () {
