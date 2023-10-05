@@ -47,4 +47,55 @@ class SupplierController extends Controller
         return redirect()->route('supplier.all')->with($notification);
 
     } // end method
+
+    public function SupplierEdit($id){
+
+        $supplier = Supplier::findOrFail($id);
+        return view('backend.supplier.supplier_edit',compact('supplier'));
+
+    } // end method
+
+
+    public function SupplierUpdate(Request $request){
+
+        $supplier_id = $request->id;
+
+        Supplier::findOrFail($supplier_id)->update([
+
+            'name' => $request->name,
+            'mobile_no' => $request->mobile_no,
+            'email' => $request->email,
+            'address' => $request->address,
+            'updated_by' => Auth::user()->id,
+            'updated_at' => Carbon::now(),
+
+        ]);
+
+        $notification = array(
+            'message' => 'เปลี่ยนแปลงข้อมูลผู้ขายเรียบร้อยแล้ว', 
+            'alert-type' => 'info'
+        );
+
+        
+
+        return redirect()->route('supplier.all')->with($notification);
+
+
+    } // end method
+
+    public function SupplierDelete($id){
+
+        Supplier::findOrFail($id)->delete();
+
+        $notification = array(
+            'message' => 'ลบข้อมูลผู้ขายเรียบร้อยแล้ว', 
+            'alert-type' => 'info'
+        );
+
+        
+
+        return redirect()->route('supplier.all')->with($notification);
+
+
+    } // end method
 }
