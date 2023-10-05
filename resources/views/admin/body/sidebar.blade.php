@@ -45,7 +45,7 @@
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
                                     <li><a href="{{route('supplier.all')}}">แสดงข้อมูลทั้งหมด</a></li>
-                                    
+                                    <li><a href="{{route('supplier.add')}}">เพิ่มข้อมูล</a></li>
                                 </ul>
                             </li>
 

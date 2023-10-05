@@ -16,7 +16,7 @@
 
 
 
-            <form id= "myForm" method="post" action="{{ route('update.password') }}" >
+            <form id= "myForm" method="post" action="{{ route('supplier.store') }}" >
                 @csrf
 
             <div class="row mb-3">
@@ -31,7 +31,7 @@
               <div class="row mb-3">
                 <label for="example-text-input" class="col-sm-2 col-form-label">เบอร์โทรติดต่อ </label>
                 <div class="col-sm-10 form-group">
-                    <input name="mobile_no" class="form-control" type="text"    >
+                    <input name="mobile_no" class="form-control" type="number"    >
                 </div>
             </div>
             <!-- end row -->
@@ -82,9 +82,11 @@
                 }, 
                  mobile_no: {
                     required : true,
+                    
                 },
                  email: {
                     required : true,
+                    email: true,
                 },
                  address: {
                     required : true,
@@ -96,9 +98,11 @@
                 },
                 mobile_no: {
                     required : 'เบอร์โทร ต้องไม่เป็นค่าว่าง',
+                    
                 },
                 email: {
                     required : 'อีเเมลล์ ต้องไม่เป็นค่าว่าง',
+                    email: 'ต้องเป็นรูปแบบที่มี @ ตามหลักสากล',
                 },
                 address: {
                     required : 'ที่อยู่ ต้องไม่เป็นค่าว่าง',
