@@ -122,6 +122,8 @@ Route::controller(CategoryController::class)->group(function(){
 Route::controller(ProductController::class)->group(function(){
 
     Route::get('/product/all', 'ProductAll')->name('product.all');
+    Route::get('/product/add', 'ProductAdd')->name('product.add');
+    
    
     
     

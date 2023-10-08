@@ -23,7 +23,7 @@
             <div class="card">
                 <div class="card-body">
 
-                    <a href="{{route('supplier.add')}}" class="btn btn-dark btn-rounded waves-effect waves-light" style="float:right;">เพิ่มข้อมูล</a> <br>  <br>               
+                    <a href="{{route('product.add')}}" class="btn btn-dark btn-rounded waves-effect waves-light" style="float:right;">เพิ่มข้อมูล</a> <br>  <br>               
 
                     <h4 class="card-title">ข้อมูลสินค้าทั้งหมด</h4>
 
