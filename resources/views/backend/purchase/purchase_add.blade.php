@@ -31,7 +31,7 @@
         <div class="col-md-4">
             <div class="md-3">
                 <label for="example-text-input" class="form-label">Supplier Name </label>
-                <select id="supplier_id" name="supplier_id" class="form-select" aria-label="Default select example">
+                <select id="supplier_id" name="supplier_id" class="form-select select2" aria-label="Default select example">
                 <option selected="">Open this select menu</option>
                 @foreach($supplier as $supp)
                 <option value="{{ $supp->id }}">{{ $supp->name }}</option>
@@ -44,7 +44,7 @@
        <div class="col-md-4">
             <div class="md-3">
                 <label for="example-text-input" class="form-label">Category Name </label>
-                <select name="category_id" id="category_id" class="form-select" aria-label="Default select example">
+                <select name="category_id" id="category_id" class="form-select select2" aria-label="Default select example">
                 <option selected="">Open this select menu</option>
                 
                 </select>
@@ -55,7 +55,7 @@
          <div class="col-md-4">
             <div class="md-3">
                 <label for="example-text-input" class="form-label">Product Name </label>
-                <select name="product_id" id="product_id" class="form-select" aria-label="Default select example">
+                <select name="product_id" id="product_id" class="form-select select2" aria-label="Default select example">
                 <option selected="">Open this select menu</option>
                
                 </select>
@@ -89,7 +89,7 @@
                     <tr>
                         <th>Category</th>
                         <th>Product Name </th>
-                        <th>PSC1/KG</th>
+                        <th>PSC/KG</th>
                         <th>Unit Price </th>
                         <th>Description</th>
                         <th>Total Price</th>
@@ -170,7 +170,7 @@
         <input type="number" class="form-control unit_price text-right" name="unit_price[]" value=""> 
     </td>
 
-    <td>
+ <td>
         <input type="text" class="form-control" name="description[]"> 
     </td>
 
@@ -182,7 +182,7 @@
         <i class="btn btn-danger btn-sm fas fa-window-close removeeventmore"></i>
     </td>
 
-</tr>
+    </tr>
 
 </script>
 
