@@ -14,13 +14,13 @@
 
 
 
-            <form method="post" action="{{ route('supplier.store') }}" id="myForm" >
+            <form method="post" action="{{ route('customer.store') }}" id="myForm" enctype="multipart/form-data">
                 @csrf
 
             <div class="row mb-3">
                 <label for="example-text-input" class="col-sm-2 col-form-label">ชื่อ </label>
                 <div class="form-group col-sm-10">
-                    <input name="name" class="form-control" type="text"    >
+                    <input name="name" class="form-control" type="text" >
                 </div>
             </div>
             <!-- end row -->

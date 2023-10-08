@@ -63,7 +63,7 @@ class AdminController extends Controller
             $image = $request->file('profile_image');
             $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
             Image::make($image)->resize(300,300)->save('upload/admin_images/'.$name_gen);
-            $save_url = $name_gen;
+            $save_url = 'upload/admin_images/'.$name_gen;
 
             User::findOrFail($profile_id)->update([
 

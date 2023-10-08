@@ -69,6 +69,8 @@ Route::controller(CustomerController::class)->group(function(){
 
     Route::get('/customer/all', 'CustomerAll')->name('customer.all');
     Route::get('/customer/add', 'CustomerAdd')->name('customer.add');
+
+    Route::post('/customer/store', 'CustomerStore')->name('customer.store');
     
     
 }); // end supplier all route
