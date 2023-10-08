@@ -79,7 +79,7 @@ class UnitController extends Controller
 
         $notification = array(
             'message' => 'ลบข้อมูลเรียบร้อยแล้ว', 
-            'alert-type' => 'danger'
+            'alert-type' => 'error'
         );
 
         return redirect()->back()->with($notification);

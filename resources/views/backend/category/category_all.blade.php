@@ -46,9 +46,9 @@
                             <td> {{ $item->name }} </td> 
                              
                             <td>
-   <a href="{{route('unit.edit',$item->id)}}" class="btn btn-info sm" title="แก้ไข">  <i class="fas fa-edit"></i> </a>
+   <a href="{{route('category.edit',$item->id)}}" class="btn btn-info sm" title="แก้ไข">  <i class="fas fa-edit"></i> </a>
 
-    <a href="{{route('unit.delete',$item->id)}}" class="btn btn-danger sm" title="ลบ" id="delete" id="delete">  <i class="fas fa-trash-alt"></i> </a>
+    <a href="{{route('category.delete',$item->id)}}" class="btn btn-danger sm" title="ลบ" id="delete" id="delete">  <i class="fas fa-trash-alt"></i> </a>
 
                             </td>
 
