@@ -78,7 +78,7 @@
                                     <span>หน่วยนับ</span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
-                                    <li><a href="auth-login.html">แสดงข้อมูลทั้งหมด</a></li>
+                                    <li><a href="{{route('unit.all')}}">แสดงข้อมูลทั้งหมด</a></li>
                                     
                                 </ul>
                             </li>

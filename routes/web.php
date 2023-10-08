@@ -6,6 +6,8 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Pos\SupplierController;
 use App\Http\Controllers\Pos\CustomerController;
 
+use App\Http\Controllers\Pos\UnitController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -75,6 +77,14 @@ Route::controller(CustomerController::class)->group(function(){
     Route::post('/customer/update', 'CustomerUpdate')->name('customer.update');
 
     Route::get('/customer/delete/{id}', 'CustomerDelete')->name('customer.delete');
+    
+    
+}); // end supplier all route
+
+Route::controller(UnitController::class)->group(function(){
+
+    Route::get('/unit/all', 'UnitAll')->name('unit.all');
+    
     
     
 }); // end supplier all route
