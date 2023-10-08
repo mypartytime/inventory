@@ -8,6 +8,7 @@ use App\Http\Controllers\Pos\CustomerController;
 
 use App\Http\Controllers\Pos\UnitController;
 use App\Http\Controllers\Pos\CategoryController;
+use App\Http\Controllers\Pos\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -115,5 +116,15 @@ Route::controller(CategoryController::class)->group(function(){
     
     
 }); // end category all route
+
+// Product all route
+
+Route::controller(ProductController::class)->group(function(){
+
+    Route::get('/product/all', 'ProductAll')->name('product.all');
+   
+    
+    
+}); // end product all route
 
 require __DIR__.'/auth.php';
