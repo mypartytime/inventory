@@ -9,7 +9,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                    <h4 class="mb-sm-0">ข้อมูลหน่วยนับ</h4>
+                                    <h4 class="mb-sm-0">ข้อมูลหมวดหมู่สินค้า</h4>
 
 
 
@@ -25,7 +25,7 @@
 
                     <a href="{{route('unit.add')}}" class="btn btn-dark btn-rounded waves-effect waves-light" style="float:right;">เพิ่มข้อมูล</a> <br>  <br>               
 
-                    <h4 class="card-title">ข้อมูลหน่วยนับทั้งหมด</h4>
+                    <h4 class="card-title">ข้อมูลหมวดหมู่สินค้าทั้งหมด</h4>
 
 
                     <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
@@ -40,7 +40,7 @@
 
                         <tbody>
 
-                        	@foreach($units as $key => $item)
+                        	@foreach($categories as $key => $item)
                         <tr>
                             <td> {{ $key+1}} </td>
                             <td> {{ $item->name }} </td> 

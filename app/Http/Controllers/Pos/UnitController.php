@@ -68,11 +68,21 @@ class UnitController extends Controller
 
         return redirect()->route('unit.all')->with($notification);
 
-      
+
+    }// end method
+
+    public function UnitDelete($id){
 
         
 
-        
+        Unit::findOrFail($id)->delete();
+
+        $notification = array(
+            'message' => 'ลบข้อมูลเรียบร้อยแล้ว', 
+            'alert-type' => 'danger'
+        );
+
+        return redirect()->back()->with($notification);
 
     }// end method
 }

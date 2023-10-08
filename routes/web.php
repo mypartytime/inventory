@@ -7,6 +7,7 @@ use App\Http\Controllers\Pos\SupplierController;
 use App\Http\Controllers\Pos\CustomerController;
 
 use App\Http\Controllers\Pos\UnitController;
+use App\Http\Controllers\Pos\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -81,6 +82,8 @@ Route::controller(CustomerController::class)->group(function(){
     
 }); // end supplier all route
 
+// Unit all route
+
 Route::controller(UnitController::class)->group(function(){
 
     Route::get('/unit/all', 'UnitAll')->name('unit.all');
@@ -89,9 +92,22 @@ Route::controller(UnitController::class)->group(function(){
     Route::post('/unit/store', 'UnitStore')->name('unit.store');
     Route::get('/unit/edit/{id}', 'UnitEdit')->name('unit.edit');
     Route::post('/unit/update', 'UnitUpdate')->name('unit.update');
+
+    Route::get('/unit/delete/{id}', 'UnitDelete')->name('unit.delete');
     
     
     
-}); // end supplier all route
+}); // end unit all route
+
+// Category all route
+
+Route::controller(CategoryController::class)->group(function(){
+
+    Route::get('/category/all', 'CategoryAll')->name('category.all');
+    
+    
+    
+    
+}); // end category all route
 
 require __DIR__.'/auth.php';
