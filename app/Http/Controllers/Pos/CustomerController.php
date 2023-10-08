@@ -122,4 +122,22 @@ class CustomerController extends Controller
         
 
     }// end method
+
+    public function CustomerDelete($id){
+
+        $customer = Customer::findOrFail($id);
+        $img_link = $customer->customer_image;
+
+        unlink($img_link);
+
+        Customer::findOrFail($id)->delete();
+
+        $notification = array(
+            'message' => 'ลบข้อมูลเรียบร้อยแล้ว', 
+            'alert-type' => 'danger'
+        );
+
+        return redirect()->back()->with($notification);
+
+    }// end method
 }
