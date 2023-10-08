@@ -85,7 +85,7 @@
 
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow waves-effect">
-                                    <i class="ri-scales-2-line"></i>
+                                    <i class="ri-gift-2-line"></i>
                                     <span>หมวดหมู่สินค้า</span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
