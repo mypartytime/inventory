@@ -101,6 +101,7 @@
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
                                     <li><a href="{{route('purchase.all')}}">แสดงข้อมูลทั้งหมด</a></li>
+                                    <li><a href="{{ route('purchase.pending') }}">Approval Purchase</a></li>
                                     
                                 </ul>
                             </li>
