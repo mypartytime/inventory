@@ -10,15 +10,15 @@
     <div class="card">
         <div class="card-body">
 
-            <h4 class="card-title">Add Product Page </h4><br><br>
+            <h4 class="card-title">เพิ่มสินค้า</h4><br><br>
 
 
 
- <form method="post" action="{{ route('supplier.store') }}" id="myForm" >
+ <form method="post" action="{{ route('product.store') }}" id="myForm" >
                 @csrf
 
             <div class="row mb-3">
-                <label for="example-text-input" class="col-sm-2 col-form-label">Product Name </label>
+                <label for="example-text-input" class="col-sm-2 col-form-label">ชื่อสินค้า</label>
                 <div class="form-group col-sm-10">
                     <input name="name" class="form-control" type="text"    >
                 </div>
@@ -27,10 +27,10 @@
 
 
             <div class="row mb-3">
-        <label class="col-sm-2 col-form-label">Supplier Name </label>
+        <label class="col-sm-2 col-form-label">ชื่อผู้ขาย</label>
         <div class="col-sm-10">
             <select name="supplier_id" class="form-select" aria-label="Default select example">
-                <option selected="" disabled="">โปรดเลือกผู้ขาย</option>
+                <option selected="" disabled="">โปรดเสือกผู้ชาย</option>
                 @foreach($supplier as $supp)
                 <option value="{{ $supp->id }}">{{ $supp->name }}</option>
                @endforeach
@@ -40,7 +40,7 @@
   <!-- end row -->
 
       <div class="row mb-3">
-        <label class="col-sm-2 col-form-label">Unit Name </label>
+        <label class="col-sm-2 col-form-label">หน่วยนับ </label>
         <div class="col-sm-10">
             <select name="unit_id" class="form-select" aria-label="Default select example">
             <option selected="" disabled="">โปรดเสือกหน่วยนับ</option>
@@ -55,7 +55,7 @@
 
 
       <div class="row mb-3">
-        <label class="col-sm-2 col-form-label">Category Name </label>
+        <label class="col-sm-2 col-form-label">หมวดหมู่ </label>
         <div class="col-sm-10">
             <select name="category_id" class="form-select" aria-label="Default select example">
             <option selected="" disabled="">โปรดเสือกหมวดหมู่</option>
