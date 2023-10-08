@@ -83,4 +83,19 @@ class ProductController extends Controller
 
 
     } // End Method 
+
+    public function ProductDelete($id){
+
+        
+
+        Product::findOrFail($id)->delete();
+
+        $notification = array(
+            'message' => 'ลบข้อมูลเรียบร้อยแล้ว', 
+            'alert-type' => 'error'
+        );
+
+        return redirect()->back()->with($notification);
+
+    }// end method
 }
