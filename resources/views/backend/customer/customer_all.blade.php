@@ -32,8 +32,9 @@
                         <thead>
                         <tr>
                             <th>ลำดับ</th>
-                            <th>ชื่อ</th> 
                             <th>รูปภาพ </th>
+                            <th>ชื่อ</th> 
+                            <th>เบอร์โทร</th> 
                             <th>อีเมลล์</th>
                             <th>ที่อยู่</th> 
                             <th>คำสั่ง</th>
@@ -46,12 +47,13 @@
                         	@foreach($customers as $key => $item)
                         <tr>
                             <td> {{ $key+1}} </td>
+                            <td> <img src="{{ asset( $item->customer_image ) }}" style="width:50px; height:50px"> </td> 
                             <td> {{ $item->name }} </td> 
-           <td> <img src="{{ asset( $item->customer_image ) }}" style="width:50px; height:50px"> </td> 
+                            <td> {{ $item->mobile_no }} </td> 
                               <td> {{ $item->email }} </td> 
                                <td> {{ $item->address }} </td> 
                             <td>
-   <a href="{{ route('supplier.edit',$item->id) }}" class="btn btn-info sm" title="Edit Data">  <i class="fas fa-edit"></i> </a>
+   <a href="{{ route('customer.edit',$item->id) }}" class="btn btn-info sm" title="Edit Data">  <i class="fas fa-edit"></i> </a>
 
      <a href="{{ route('supplier.delete',$item->id) }}" class="btn btn-danger sm" title="Delete Data" id="delete">  <i class="fas fa-trash-alt"></i> </a>
 
