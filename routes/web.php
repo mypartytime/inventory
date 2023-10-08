@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Pos\SupplierController;
+use App\Http\Controllers\Pos\CustomerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -59,6 +60,15 @@ Route::controller(SupplierController::class)->group(function(){
     Route::post('/supplier/update', 'SupplierUpdate')->name('supplier.update');
 
     Route::get('/supplier/delete/{id}', 'SupplierDelete')->name('supplier.delete');
+    
+}); // end supplier all route
+
+// Supplier all route
+
+Route::controller(CustomerController::class)->group(function(){
+
+    Route::get('/customer/all', 'CustomerAll')->name('customer.all');
+    
     
 }); // end supplier all route
 

@@ -45,7 +45,7 @@
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
                                     <li><a href="{{route('supplier.all')}}">แสดงข้อมูลทั้งหมด</a></li>
-                                    <li><a href="{{route('supplier.add')}}">เพิ่มข้อมูล</a></li>
+                                    
                                 </ul>
                             </li>
 
@@ -55,7 +55,7 @@
                                     <span>ลูกค้า</span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
-                                    <li><a href="auth-login.html">แสดงข้อมูลทั้งหมด</a></li>
+                                    <li><a href="{{route('customer.all')}}">แสดงข้อมูลทั้งหมด</a></li>
                                     
                                 </ul>
                             </li>
@@ -67,6 +67,7 @@
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
                                     <li><a href="auth-login.html">แสดงข้อมูลทั้งหมด</a></li>
+                                   
                                     
                                 </ul>
                             </li>
