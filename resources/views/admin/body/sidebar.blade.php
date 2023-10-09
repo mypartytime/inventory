@@ -26,8 +26,8 @@
                             <li class="menu-title">Menu</li>
 
                             <li>
-                                <a href="index.html" class="waves-effect">
-                                    <i class="ri-dashboard-line"></i><span class="badge rounded-pill bg-success float-end">3</span>
+                                <a href="{{ url('/dashboard') }}" class="waves-effect">
+                                    <i class="ri-home-fill"></i> 
                                     <span>Dashboard</span>
                                 </a>
                             </li>
@@ -57,6 +57,8 @@
                                 <ul class="sub-menu" aria-expanded="false">
                                     <li><a href="{{route('customer.all')}}">แสดงข้อมูลทั้งหมด</a></li>
                                     <li><a href="{{ route('credit.customer') }}">ลูกค้าเครดิต</a></li>
+                                    <li><a href="{{ route('paid.customer') }}">ลูกค้าชำระเงินแล้ว</a></li>
+                                    <li><a href="{{ route('customer.wise.report') }}">ลูกค้าที่ซื้อสินค้า</a></li>
                                     
                                 </ul>
                             </li>

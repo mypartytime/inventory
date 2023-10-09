@@ -106,7 +106,7 @@ class PurchaseController extends Controller
             'message' => 'Status Approved Successfully', 
             'alert-type' => 'success'
               );
-        return redirect()->route('purchase.all')->with($notification); 
+        return redirect()->route('purchase.pending')->with($notification); 
     
             }
     
