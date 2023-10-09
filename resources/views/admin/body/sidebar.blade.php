@@ -101,8 +101,20 @@
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
                                     <li><a href="{{route('purchase.all')}}">แสดงข้อมูลทั้งหมด</a></li>
-                                    <li><a href="{{ route('purchase.pending') }}">Approval Purchase</a></li>
+                                    <li><a href="{{ route('purchase.pending') }}">อนุมัติจัดซื้อ</a></li>
                                     
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                    <i class="ri-mail-send-line"></i>
+                                    <span>จัดการใบแจ้งหนี้</span>
+                                </a>
+                                <ul class="sub-menu" aria-expanded="false">
+                                    <li><a href="{{ route('invoice.all') }}">ใบแจ้งหนี้ทั้งหมด</a></li>
+                                    
+
                                 </ul>
                             </li>
 

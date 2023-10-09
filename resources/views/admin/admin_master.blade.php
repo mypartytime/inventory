@@ -146,7 +146,7 @@
 
     <script src="{{ asset('backend/assets/js/handlebars.js') }}"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.min.js" ></script>
+    <script src="{{ asset('backend/assets/js/notify.min.js') }}"></script>
 
     <!--  For Select2 -->
     <script src="{{ asset('backend/assets/libs/select2/js/select2.min.js') }}"></script>

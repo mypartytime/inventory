@@ -11,6 +11,7 @@ use App\Http\Controllers\Pos\CategoryController;
 use App\Http\Controllers\Pos\ProductController;
 use App\Http\Controllers\Pos\PurchaseController;
 use App\Http\Controllers\Pos\DefaultController;
+use App\Http\Controllers\Pos\InvoiceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -159,5 +160,13 @@ Route::controller(PurchaseController::class)->group(function () {
 
 
 }); // end purchase all route
+
+// Invoice All Route 
+Route::controller(InvoiceController::class)->group(function () {
+    Route::get('/invoice/all', 'InvoiceAll')->name('invoice.all'); 
+    Route::get('/invoice/add', 'invoiceAdd')->name('invoice.add');
+
+
+});// Invoice All Route 
 
 require __DIR__.'/auth.php';
