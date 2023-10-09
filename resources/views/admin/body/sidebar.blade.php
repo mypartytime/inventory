@@ -128,7 +128,7 @@
 
                                 <li>
                                     <a href="javascript: void(0);" class="has-arrow waves-effect">
-                                        <i class="ri-account-circle-line"></i>
+                                        <i class="ri-server-line"></i>
                                         <span>จัดการคลังสินค้า</span>
                                     </a>
                                     <ul class="sub-menu" aria-expanded="false">
@@ -138,47 +138,9 @@
                                     </ul>
                                 </li>
 
-                            <li>
-                                <a href="javascript: void(0);" class="has-arrow waves-effect">
-                                    <i class="ri-profile-line"></i>
-                                    <span>Utility</span>
-                                </a>
-                                <ul class="sub-menu" aria-expanded="false">
-                                    <li><a href="pages-starter.html">Starter Page</a></li>
-                                    <li><a href="pages-timeline.html">Timeline</a></li>
-                                    <li><a href="pages-directory.html">Directory</a></li>
-                                    <li><a href="pages-invoice.html">Invoice</a></li>
-                                    <li><a href="pages-404.html">Error 404</a></li>
-                                    <li><a href="pages-500.html">Error 500</a></li>
-                                </ul>
-                            </li>
+                            
 
-                            <li class="menu-title">Components</li>
-
-                            <li>
-                                <a href="javascript: void(0);" class="has-arrow waves-effect">
-                                    <i class="ri-pencil-ruler-2-line"></i>
-                                    <span>UI Elements</span>
-                                </a>
-                                <ul class="sub-menu" aria-expanded="false">
-                                    <li><a href="ui-alerts.html">Alerts</a></li>
-                                    <li><a href="ui-buttons.html">Buttons</a></li>
-                                    <li><a href="ui-cards.html">Cards</a></li>
-                                    <li><a href="ui-carousel.html">Carousel</a></li>
-                                    <li><a href="ui-dropdowns.html">Dropdowns</a></li>
-                                    <li><a href="ui-grid.html">Grid</a></li>
-                                    <li><a href="ui-images.html">Images</a></li>
-                                    <li><a href="ui-lightbox.html">Lightbox</a></li>
-                                    <li><a href="ui-modals.html">Modals</a></li>
-                                    <li><a href="ui-offcanvas.html">Offcavas</a></li>
-                                    <li><a href="ui-progressbars.html">Progress Bars</a></li>
-                                    <li><a href="ui-tabs-accordions.html">Tabs & Accordions</a></li>
-                                    <li><a href="ui-typography.html">Typography</a></li>
-                                    <li><a href="ui-video.html">Video</a></li>
-                                    <li><a href="ui-general.html">General</a></li>
-                        
-                                </ul>
-                            </li>
+                           
 
                             
 

@@ -32,13 +32,13 @@
                         <thead>
                         <tr>
                             <th>Sl</th>
-                            <th>Supplier Name </th>
-                            <th>Unit</th>
-                            <th>Category</th> 
-                            <th>Product Name</th> 
-                            <th>In Qty</th> 
-                            <th>Out Qty </th>  
-                            <th>Stock </th>
+                            <th>ชื่อผู้ขาย</th>
+                            <th>หน่วยนับ</th>
+                            <th>หมวดหมู่</th> 
+                            <th>ชื่อสินค้า</th> 
+                            <th>ซื้อเข้ารวม</th> 
+                            <th>ขายไปรวม </th>  
+                            <th>จำนวนที่มี </th>
                             
                         </thead>
 
