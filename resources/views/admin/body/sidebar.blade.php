@@ -120,6 +120,20 @@
                                 </ul>
                             </li>
 
+                            <li class="menu-title">คลังสินค้า</li>
+
+                                <li>
+                                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                        <i class="ri-account-circle-line"></i>
+                                        <span>จัดการคลังสินค้า</span>
+                                    </a>
+                                    <ul class="sub-menu" aria-expanded="false">
+                                        <li><a href="{{ route('stock.report') }}">รายงาน</a></li>
+                                        <li><a href="{{ route('stock.supplier.wise') }}">ผู้ขายและสินค้า</a></li>
+
+                                    </ul>
+                                </li>
+
                             <li>
                                 <a href="javascript: void(0);" class="has-arrow waves-effect">
                                     <i class="ri-profile-line"></i>

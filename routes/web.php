@@ -13,6 +13,8 @@ use App\Http\Controllers\Pos\PurchaseController;
 use App\Http\Controllers\Pos\DefaultController;
 use App\Http\Controllers\Pos\InvoiceController;
 
+use App\Http\Controllers\Pos\StockController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -181,5 +183,16 @@ Route::controller(InvoiceController::class)->group(function () {
 
 
 });// Invoice All Route 
+
+// Stock All Route 
+Route::controller(StockController::class)->group(function () {
+    Route::get('/stock/report', 'StockReport')->name('stock.report'); 
+    Route::get('/stock/report/pdf', 'StockReportPdf')->name('stock.report.pdf'); 
+
+    Route::get('/supplier/wise/pdf', 'SupplierWisePdf')->name('supplier.wise.pdf');
+    Route::get('/stock/supplier/wise', 'StockSupplierWise')->name('stock.supplier.wise'); 
+    Route::get('/product/wise/pdf', 'ProductWisePdf')->name('product.wise.pdf');
+
+}); // Stock All Route 
 
 require __DIR__.'/auth.php';
