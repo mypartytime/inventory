@@ -56,6 +56,7 @@
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
                                     <li><a href="{{route('customer.all')}}">แสดงข้อมูลทั้งหมด</a></li>
+                                    <li><a href="{{ route('credit.customer') }}">ลูกค้าเครดิต</a></li>
                                     
                                 </ul>
                             </li>

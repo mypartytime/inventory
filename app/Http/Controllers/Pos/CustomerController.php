@@ -10,6 +10,8 @@ use Illuminate\Support\Carbon;
 use Intervention\Image\Facades\Image;
 use Illuminate\Http\RedirectResponse;
 
+use App\Models\Payment;
+
 class CustomerController extends Controller
 {
     public function CustomerAll(){
@@ -140,4 +142,18 @@ class CustomerController extends Controller
         return redirect()->back()->with($notification);
 
     }// end method
+
+    public function CreditCustomer(){
+
+        $allData = Payment::whereIn('paid_status',['full_due','partial_paid'])->get();
+        return view('backend.customer.customer_credit',compact('allData'));
+
+    } // End Method
+
+    public function CreditCustomerPrintPdf(){
+
+        $allData = Payment::whereIn('paid_status',['full_due','partial_paid'])->get();
+        return view('backend.pdf.customer_credit_pdf',compact('allData'));
+
+    }// End Method
 }
