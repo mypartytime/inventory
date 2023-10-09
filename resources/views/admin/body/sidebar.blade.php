@@ -112,8 +112,8 @@
                                     <span>จัดการใบแจ้งหนี้</span>
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
-                                    <li><a href="{{ route('invoice.all') }}">ใบแจ้งหนี้ทั้งหมด</a></li>
-                                    <li><a href="{{ route('invoice.pending.list') }}">การอนุมัติ</a></li>
+                                    <li><a href="{{ route('invoice.all') }}">อนุมัติแล้ว</a></li>
+                                    <li><a href="{{ route('invoice.pending.list') }}">รออนุมัติ</a></li>
 
                                 </ul>
                             </li>
