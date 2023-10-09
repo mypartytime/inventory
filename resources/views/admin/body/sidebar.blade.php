@@ -102,6 +102,7 @@
                                 <ul class="sub-menu" aria-expanded="false">
                                     <li><a href="{{route('purchase.all')}}">แสดงข้อมูลทั้งหมด</a></li>
                                     <li><a href="{{ route('purchase.pending') }}">อนุมัติจัดซื้อ</a></li>
+                                    <li><a href="{{ route('daily.purchase.report') }}">รายงานจัดซื้อ</a></li>
                                     
                                 </ul>
                             </li>

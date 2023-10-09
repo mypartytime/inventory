@@ -30,15 +30,7 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-// Default All Route 
-Route::controller(DefaultController::class)->group(function () {
-    Route::get('/get-category', 'GetCategory')->name('get-category'); 
-    Route::get('/get-product', 'GetProduct')->name('get-product');
-    Route::get('/check-product', 'GetStock')->name('check-product-stock'); 
 
-
-
-});
 
 Route::get('/dashboard', function () {
     return view('admin.index');
@@ -50,7 +42,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-
+Route::middleware('auth')->group(function(){
 
 // Admin all route
 
@@ -160,6 +152,8 @@ Route::controller(PurchaseController::class)->group(function () {
     Route::get('/purchase/pending', 'PurchasePending')->name('purchase.pending');
 
     Route::get('/purchase/approve/{id}', 'PurchaseApprove')->name('purchase.approve');
+    Route::get('/daily/purchase/report', 'DailyPurchaseReport')->name('daily.purchase.report');
+    Route::get('/daily/purchase/pdf', 'DailyPurchasePdf')->name('daily.purchase.pdf');
 
 
 }); // end purchase all route
@@ -194,5 +188,17 @@ Route::controller(StockController::class)->group(function () {
     Route::get('/product/wise/pdf', 'ProductWisePdf')->name('product.wise.pdf');
 
 }); // Stock All Route 
+
+}); // End Group Middleware
+
+// Default All Route 
+Route::controller(DefaultController::class)->group(function () {
+    Route::get('/get-category', 'GetCategory')->name('get-category'); 
+    Route::get('/get-product', 'GetProduct')->name('get-product');
+    Route::get('/check-product', 'GetStock')->name('check-product-stock'); 
+
+
+
+});
 
 require __DIR__.'/auth.php';
