@@ -136,15 +136,41 @@
                         <option value="full_paid">Full Paid </option>
                         <option value="full_due">Full Due </option>
                         <option value="partial_paid">Partial Paid </option>
-
+                        
                     </select>
-                <input type="text" name="paid_amount" class="form-control paid_amount" placeholder="Enter Paid Amount" style="display:none;">
+        <input type="text" name="paid_amount" class="form-control paid_amount" placeholder="Enter Paid Amount" style="display:none;">
                 </div>
-            </div><br>
 
 
+            <div class="form-group col-md-9">
+                <label> Customer Name  </label>
+                    <select name="customer_id" id="customer_id" class="form-select">
+                        <option value="">Select Customer </option>
+                        @foreach($customer as $cust)
+                        <option value="{{ $cust->id }}">{{ $cust->name }} - {{ $cust->mobile_no }}</option>
+                        @endforeach
+                         <option value="0">New Customer </option>
+                    </select>
+            </div> 
+            </div> <!-- // end row --> <br>
 
+<!-- Hide Add Customer Form -->
+<div class="row new_customer" style="display:none">
+    <div class="form-group col-md-4">
+        <input type="text" name="name" id="name" class="form-control" placeholder="Write Customer Name">
+    </div>
 
+    <div class="form-group col-md-4">
+        <input type="text" name="mobile_no" id="mobile_no" class="form-control" placeholder="Write Customer Mobile No">
+    </div>
+
+    <div class="form-group col-md-4">
+        <input type="email" name="email" id="email" class="form-control" placeholder="Write Customer Email">
+    </div>
+</div>
+<!-- End Hide Add Customer Form -->
+
+ <br>
             <div class="form-group">
                 <button type="submit" class="btn btn-info" id="storeButton"> Invoice Store</button>
                 
@@ -338,6 +364,7 @@
 
 </script>
 
+
 <script type="text/javascript">
     $(document).on('change','#paid_status', function(){
         var paid_status = $(this).val();
@@ -347,10 +374,18 @@
             $('.paid_amount').hide();
         }
     });
+
+      $(document).on('change','#customer_id', function(){
+        var customer_id = $(this).val();
+        if (customer_id == '0') {
+            $('.new_customer').show();
+        }else{
+            $('.new_customer').hide();
+        }
+    });
+
+
 </script>
-
-
-
 
  
 
