@@ -113,7 +113,7 @@
                                 </a>
                                 <ul class="sub-menu" aria-expanded="false">
                                     <li><a href="{{ route('invoice.all') }}">ใบแจ้งหนี้ทั้งหมด</a></li>
-                                    
+                                    <li><a href="{{ route('invoice.pending.list') }}">การอนุมัติ</a></li>
 
                                 </ul>
                             </li>
