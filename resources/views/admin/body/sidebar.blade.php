@@ -114,6 +114,7 @@
                                 <ul class="sub-menu" aria-expanded="false">
                                     <li><a href="{{ route('invoice.all') }}">อนุมัติแล้ว</a></li>
                                     <li><a href="{{ route('invoice.pending.list') }}">รออนุมัติ</a></li>
+                                    <li><a href="{{ route('print.invoice.list') }}">พิมพ์ใบแจ้งหนี้</a></li>
 
                                 </ul>
                             </li>
